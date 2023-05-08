@@ -1,19 +1,14 @@
+/* GERAIS */
 body {
    background-color: #000;
 }
 
-body.bg_filmes{
-   background-image: url(../img/Fundo.jpg);
-   background-size: cover;
-   background-repeat: no-repeat;
-}
-
 header {
    padding: 50px;
-   background: linear-gradient(
+   background: linear-gra(
    180deg,
-   #000(0, 0, 0, 0.69) 0%,
-   #000(0, 0, 0, 0.7861519607843137) 100%,  
+   rgba(0, 0, 0, 0.69) 0%,
+   rgba(0, 0, 0, 0.7861519607843137)100%,  
    );
 }
 
@@ -22,12 +17,31 @@ header img {
    height: 200px;
    right:auto;
 }
+/* LOGIN */
+body.bg_filmes{
+   background-image: url(../img/Fundo.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+}
 
 #caixa_login {
-   height: 50px;
+   height: 250px;
    padding: 100px;
    margin-top: 150px;
    text-align: center;
+}
+
+
+/* HOME */
+.menu_list{
+   list-style: none;
+   padding-left: 0;
+   padding-top: 7px;
+}
+
+.menu_list li{
+   display: inline-block;
+   margin-left: 15px;
 }
 
 
