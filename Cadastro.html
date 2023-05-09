@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt -BR">
+<head>
+              <meta charset="UTF-8">
+              <meta http-equiv="X-UA-Compatible" content="IE=edge">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <link rel="stylesheet" href="/CinePeak/node_modules/bootstrap/dist/css/bootstrap.css">
+              <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+              <link rel="stylesheet" href="css/styles.css">
+              <title>CINEPEAK :: Cadastro</title>
+</head>
+<body style="min-width:100px;">
+   <nav class="navbar navbar-expand-lg navbar-expand bg-dark border-bottom shadow-sm mb-auto ">
+      <div class="container">
+         <a class="navbar-brand" href="../CinePeak Grupo 16/CinePeak/img/Logo Definido.png"><strong></strong></a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="navbar-collapse collapse">
+            <ul class="navbar-nav flex-grow-1">
+               <li class="nav-item">
+                  <a href="#" class="nav-link text-white"><b style="color: orangered;">CINEPEAK</b></a>
+               </li>
+               <li class="nav-item">
+                  <a href="#" class="nav-link text-white"></a>
+               </li>
+            </ul>
+
+            <div class="align-self-end">
+               <ul class="navbar-nav">
+                  <li class="nav-item">
+                     <a href="#" class="nav-link text-white"></a>
+                  </li>
+                  <li class="nav-item">
+                     <a href="../CinePeak Grupo 16/CinePeak/index.html" class="nav-link text-white"></a>
+                  </li>
+                  <li class="nav-item">
+                     <a href="#" class="nav-link text-white">
+
+                        <svg class="bi" width="24" height="24" fill="currentcolor">
+                           <use xlink:href="/bi.svg#cart3" />
+
+                        </svg>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+
+
+   </nav>
+
+   <main>
+      <div class="container">
+         <h1>Informe seus dados,por favor</h1>
+         <hr>
+
+         <form>
+            <div class="row">
+               <div class="col-sm-12 col-md-6">
+                  <fieldset class="row">
+                     <legend>Dados Pessoais</legend>
+
+                     <div class="mb-3">
+                        <label for="txtNome" class="from-label">Nome</label>
+                        <input type="text" class="form-control" id="textNome">
+                     </div>
+
+                     <div class=" mb-3 col-md-6 col-x1-4">
+                        <label for="txtCPF" CPF class="form-label">CPF</label>
+                        <span class="form-text">Somente números</span>
+                        <input type="text" class="form-control" id="txtCPF">
+                     </div>
+
+                     <div class=" mb-3 col-md-6 col-x1-4">
+                        <label for="txtDataNascimento" class="form-label">Data de Nascimento</label>
+                        <input type="date" class="form-control" id="txtDataNascimento">
+                     </div>
+
+                  </fieldset>
+                  <fieldset>
+                     <legend>Contatos</legend>
+
+                     <div class="mb-3 col-md-8">
+                        <label for="txtEmail" class="from-label">E-mail</label>
+                        <input type="email" class="form-control" id="textEmail">
+                     </div>
+                     <div class="mb-3 col-md-6">
+                        <label for="txtTelefone" class="from-label">Telefone</label>
+                        <input type="Tel" class="form-control" id="textTelefone" placeholder="(28)99999-0000">
+                        <span class="form-text">(com DDD, somente números)</span>
+                     </div>
+                  </fieldset>
+
+               </div>
+               <div class="col-sm-12-md-6">
+                  <fieldset class="row">
+                     <legend>Endereço</legend>
+                     <div class="mb-3 col-md-6 col-lg-4">
+                        <label for="txtCEP" class="form-label">CEP</label>
+                        <div class="input-group">
+                           <input type="text" class="form-control" id="txtCEP">
+                           <span class="input-group-text p-1">
+                              <svg class="bi" width="24" height="24" fill="currentColor">
+                                 <use xlink:href="/bi.svg#hourglass-split" />
+                              </svg>
+                           </span>
+                        </div>
+                     </div>
+                     <div class="mb-3 col-md-6 col-lg-2 align-self-end">
+                        <textarea class="form-control text-muted bg-light" style="height:68px;
+                          ">Digite o CEP para buscarmos o endereço</textarea>
+
+                        <div class="mb-3 col-md-4">
+                           <label for="txtNumero" class="from-label">Número</label>
+                           <input type="text" class="form-control" id="textNome">
+                        </div>
+
+                        <div class="mb-3 col-md-8">
+                           <label for="txtComplemento" class="from-label">Complemento</label>
+                           <input type="text" class="form-control" id="textComplemento">
+                        </div>
+
+                        <div class="mb-3">
+                           <label for="txtReferencia" class="from-label">Referência</label>
+                           <input type="text" class="form-control" id="textReferencia">
+                        </div>
+                  </fieldset>
+                  <fieldset>
+                     <legend>Senha de Acesso</legend>
+
+                     <div class="mb-3">
+                        <label for="txtSenha" class="from-label">Senha</label>
+                        <input type="password" class="form-control" id="textSenha">
+                     </div>
+
+                     <div class="mb-3">
+                        <label for="txtConfSenha" class="from-label">Confirmação da Senha</label>
+                        <input type="password" class="form-control" id="textConfSenha">
+                     </div>
+                  </fieldset>
+               </div>
+            </div>
+            <hr>
+            <div class="form-check mb-3">
+             <input type="checkbox" class="forn-check-input" value="" id="chkPromocoes">
+             <label for="chkPromocoes" class="form-check-label">Desejo receber informações sobre promoções.</label>
+
+             <div class="mb-3">
+                <a class="btn btn-light btn-outline-primary" href="/CinePeak/index.html">Cancelar</a>
+                <input type="button" value="Criar meu Cadastro" class="btn btn-dark"
+                       onclick="window.location.href='/Confirmaçãodecadastro.html'">
+                     </div>
+                  </div>
+               </form>
+      </div>
+   </main>
+</body>
+</html>
