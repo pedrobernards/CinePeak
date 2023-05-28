@@ -11,8 +11,8 @@
               <link rel="stylesheet" href="css/styles.css">
               <title>CINEPEAK :: Cadastro</title>
 </head>
-<body style="min-width:100px;">
-   <nav class="navbar navbar-expand-lg navbar-expand bg-dark border-bottom shadow-sm mb-auto ">
+<body class="bg_filmes"">
+   <nav class="navbar navbar-expand-lg navbar-expand bg-gradient border-bottom shadow-sm mb- ">
       <div class="container">
          <a class="navbar-brand" href="../CinePeak Grupo 16/CinePeak/img/Logo Definido.png"><strong></strong></a>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse">
@@ -55,34 +55,34 @@
 
    <main>
       <div class="container">
-         <h1 style="color: white;">Informe seus dados,por favor</h1>
+         <h1 style="color: orange;">Informe seus dados,por favor</h1>
          <hr>
 
          <form>
             <div class="row">
                <div class="col-sm-12 col-md-6">
                   <fieldset class="row">
-                     <legend style="color: white;">Dados Pessoais</legend>
+                     <legend style="color: orange;">Dados Pessoais</legend>
 
                      <div class="mb-3">
-                        <label for="txtNome" class="from-label"><b style="color: orangered;">Nome</b></label>
+                        <label for="txtNome" class="from-label"><b style="color: white;">Nome</b></label>
                         <input type="text" class="form-control" id="textNome">
                      </div>
 
                      <div class=" mb-3 col-md-6 col-x1-4">
-                        <label for="txtCPF" CPF class="form-label"><b style="color: orangered;">CPF</b></label>
-                        <span class="form-text">Somente números</span>
+                        <label for="txtCPF" CPF class="form-label"><b style="color: white;">CPF</b></label>
+                        <span class="form-text"><b style="color: white;">Somente números</b></span>
                         <input type="text" class="form-control" id="txtCPF">
                      </div>
 
                      <div class=" mb-3 col-md-6 col-x1-4">
-                        <label for="txtDataNascimento" class="form-label"><b style="color: orangered;">Data de Nascimento</b></label>
+                        <label for="txtDataNascimento" class="form-label"><b style="color: orange;">Data de Nascimento</b></label>
                         <input type="date" class="form-control" id="txtDataNascimento">
                      </div>
 
                   </fieldset>
                   <fieldset>
-                     <legend><b style="color: orangered;">Contatos</b></legend>
+                     <legend><b style="color: orange;">Contatos</b></legend>
 
                      <div class="mb-3 col-md-8">
                         <label for="txtEmail" class="from-label"><b style="color: white;">E-mail</b></label>
@@ -91,16 +91,16 @@
                      <div class="mb-3 col-md-6">
                         <label for="txtTelefone" class="from-label"><b style="color: white;">Telefone</b></label>
                         <input type="Tel" class="form-control" id="textTelefone" placeholder="(28)99999-0000">
-                        <span class="form-text"><b style="color: orangered;">(com DDD, somente números)</b></span>
+                        <span class="form-text"><b style="color: orange;">(com DDD, somente números)</b></span>
                      </div>
                   </fieldset>
 
                </div>
-               <div class="col-sm-12-md-6">
+               <div class="col-sm-15-md-5">
                   <fieldset class="row">
-                     <legend><b style="color: white;">Endereço</b></legend>
+                     <legend><b style="color: orange;">Endereço</b></legend>
                      <div class="mb-3 col-md-6 col-lg-4">
-                        <label for="txtCEP" class="form-label"><b style="color: orangered;">CEP</b></label>
+                        <label for="txtCEP" class="form-label"><b style="color: white;">CEP</b></label>
                         <div class="input-group">
                            <input type="text" class="form-control" id="txtCEP">
                            <span class="input-group-text p-1">
@@ -115,30 +115,30 @@
                           ">Digite o CEP para buscarmos o endereço</textarea>
 
                         <div class="mb-3 col-md-4">
-                           <label for="txtNumero" class="from-label"><b style="color: orangered;">Número</b></label>
+                           <label for="txtNumero" class="from-label"><b style="color: orange;">Número</b></label>
                            <input type="text" class="form-control" id="textNome">
                         </div>
 
                         <div class="mb-3 col-md-8">
-                           <label for="txtComplemento" class="from-label"><b style="color: orangered;">Completento</b></label>
+                           <label for="txtComplemento" class="from-label"><b style="color: orange;">Completento</b></label>
                            <input type="text" class="form-control" id="textComplemento">
                         </div>
 
                         <div class="mb-3">
-                           <label for="txtReferencia" class="from-label"><b style="color: orangered;">Referência</b></label>
+                           <label for="txtReferencia" class="from-label"><b style="color: orange;">Referência</b></label>
                            <input type="text" class="form-control" id="textReferencia">
                         </div>
                   </fieldset>
                   <fieldset>
-                     <legend><b style="color: white;">Senha de Acesso</b></legend>
+                     <legend><b style="color: orange;">Senha de Acesso</b></legend>
 
-                     <div class="mb-3">
-                        <label for="txtSenha" class="from-label"><b style="color: orangered;">Senha</b></label>
+                     <div class="mb-2">
+                        <label for="txtSenha" class="from-label"><b style="color: white;">Senha</b></label>
                         <input type="password" class="form-control" id="textSenha">
                      </div>
 
-                     <div class="mb-3">
-                        <label for="txtConfSenha" class="from-label"><b style="color: orangered;">Confirmação da Senha</b></label>
+                     <div class="mb-lg-2">
+                        <label for="txtConfSenha" class="from-label"><b style="color: white;">Confirmação da Senha</b></label>
                         <input type="password" class="form-control" id="textConfSenha">
                      </div>
                   </fieldset>
@@ -147,7 +147,7 @@
             <hr>
             <div class="form-check mb-3">
              <input type="checkbox" class="forn-check-input" value="" id="chkPromocoes">
-             <label for="chkPromocoes" class="form-check-label"><b style="color: white;">Desejo receber informações sobre promoções.</b></label>
+             <label for="chkPromocoes" class="form-check-label"><b style="color: orange;">Desejo receber informações sobre promoções.</b></label>
 
              <div class="mb-3">
                 <a class="btn btn-light btn-outline-primary" href="/CinePeak/index.html">Cancelar</a>
