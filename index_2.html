@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="pt -BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="../CinePeak/img/Pipoca.png" type="image/x-icon">
+        <link rel="stylesheet" href="/CinePeak/node_modules/bootstrap/dist/css/bootstrap.css">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        >
+        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <link rel="stylesheet" href="css/styles.css">
+        <title>CINEPEAK :: Login</title>
+
+    </head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+            font-size: 36px;
+        }
+
+        h1 span {
+            display: inline-block;
+            position: relative;
+        }
+
+        h1 span.yellow {
+            color: #FFD700;
+        }
+
+        h1 span.animate {
+            animation: colorChange 2s infinite alternate;
+        }
+
+        @keyframes colorChange {
+            0% { color: #333; }
+            50% { color: #FFD700; }
+            100% { color: #333; }
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        select, input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        hr {
+            margin-top: 40px;
+            border: none;
+            border-top: 1px solid #ccc;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        .error {
+            color: #FF0000;
+            margin-bottom: 10px;
+        }
+
+        .film-info {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .film-title {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .film-rating {
+            color: #888;
+            margin-bottom: 5px;
+        }
+
+        .film-genres {
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .no-film {
+            color: #888;
+            text-align: center;
+        }
+    </style>
+    <script>
+        // Define as <opções></opções> selecionadas ao carregar a página
+        function definirOpcoesSelecionadas() {
+            var genero1Selecionado = localStorage.getItem('genero1Selecionado');
+            if (genero1Selecionado) {
+                document.getElementById('genero1').value = genero1Selecionado;
+            }
+
+            var genero2Selecionado = localStorage.getItem('genero2Selecionado');
+            if (genero2Selecionado) {
+                document.getElementById('genero2').value = genero2Selecionado;
+            }
+        }
+
+        // Captura as opções selecionadas antes de enviar o formulário
+        function salvarOpcoesSelecionadas() {
+            var genero1Selecionado = document.getElementById('genero1').value;
+            localStorage.setItem('genero1Selecionado', genero1Selecionado);
+
+            var genero2Selecionado = document.getElementById('genero2').value;
+            localStorage.setItem('genero2Selecionado', genero2Selecionado);
+        }
+    </script>
+</head>
+<body onload="definirOpcoesSelecionadas()">
+    <h1>Bem-vindo ao <span class="animate"><span class="yellow">CINE</span>PEAK</span></h1>
+
+    <form action="/" method="POST" onsubmit="salvarOpcoesSelecionadas()">
+        <label for="genero1">Primeiro Gênero:</label>
+        <select name="genero1" id="genero1">
+            <option value="0" {% if genero1 == '0' %}selected{% endif %}>Romance</option>
+            <option value="1" {% if genero1 == '1' %}selected{% endif %}>Suspense</option>
+            <option value="2" {% if genero1 == '2' %}selected{% endif %}>Ficção Científica</option>
+            <option value="3" {% if genero1 == '3' %}selected{% endif %}>Ação</option>
+            <option value="4" {% if genero1 == '4' %}selected{% endif %}>Drama</option>
+            <option value="5" {% if genero1 == '5' %}selected{% endif %}>Terror</option>
+            <option value="6" {% if genero1 == '6' %}selected{% endif %}>Comédia</option>
+        </select>
+
+        <br>
+
+        <label for="genero2">Segundo Gênero:</label>
+        <select name="genero2" id="genero2">
+            <option value="0" {% if genero2 == '0' %}selected{% endif %}>Romance</option>
+            <option value="1" {% if genero2 == '1' %}selected{% endif %}>Suspense</option>
+            <option value="2" {% if genero2 == '2' %}selected{% endif %}>Ficção Científica</option>
+            <option value="3" {% if genero2 == '3' %}selected{% endif %}>Ação</option>
+            <option value="4" {% if genero2 == '4' %}selected{% endif %}>Drama</option>
+            <option value="5" {% if genero2 == '5' %}selected{% endif %}>Terror</option>
+            <option value="6" {% if genero2 == '6' %}selected{% endif %}>Comédia</option>
+        </select>
+
+        <br>
+
+        <input type="submit" value="Buscar">
+    </form>
+    <hr>
+    <h2>Resultado:</h2>
+
+    {% if erro %}
+        <p class="error">{{ erro }}</p>
+    {% endif %}
+
+    {% if filme_recomendado %}
+        <div class="film-info">
+            <p class="film-title">Recomendamos o filme:</p>
+            <h3>{{ filme_recomendado.nome }}</h3>
+            <p class="film-rating">Pontuação do filme: {{ filme_recomendado.pontuacao_algoritmo }}</p>
+            <p class="film-genres">Gêneros: {{ filme_recomendado.genero1 }} e {{ filme_recomendado.genero2 }}</p>
+        </div>
+    {% else %}
+        <p class="no-film">Nenhum filme recomendado encontrado.</p>
+    {% endif %}
+</body>
+</html>
